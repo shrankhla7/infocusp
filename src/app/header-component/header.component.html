@@ -1,0 +1,16 @@
+<div style="text-align: center;">
+    <h1> Welcome</h1>
+
+    <form [formGroup]="form">
+          
+        <div class="form-group">
+            <label for="timezone">Select Timezone:</label>
+            <select formControlName="timezone" class="form-control" (change)="changeTimezone($event)">
+                <option disabled>Select Timezone</option>
+                <option>Choose Timezone</option>
+                <option *ngFor="let zone of timezoneList">{{zone}}</option>
+            </select>
+        </div>
+      
+    </form>
+</div>
